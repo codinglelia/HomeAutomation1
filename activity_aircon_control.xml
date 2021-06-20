@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AirconControl">
+
+    <TextView
+        android:id="@+id/AirtempResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:background="#BDBDBD"
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Airtemp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/Airtemp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <TextView
+        android:id="@+id/clntext"
+        android:layout_width="0dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text="에어컨 설정"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="16dp"
+        android:text="현재 사용자: "
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/Airtemp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clntext" />
+
+    <TextView
+        android:id="@+id/userID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView"
+        app:layout_constraintStart_toEndOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/Airtemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="온도: "
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <TextView
+        android:id="@+id/TimeResultCln"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AirtempResult" />
+
+    <Button
+        android:id="@+id/AirOn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="On"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TimeResultCln" />
+
+    <Button
+        android:id="@+id/AirOff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="Off"
+        app:layout_constraintBaseline_toBaselineOf="@+id/AirOn"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <Button
+        android:id="@+id/AirLow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="약"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AirOn" />
+
+    <Button
+        android:id="@+id/AirMid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="중"
+        app:layout_constraintBaseline_toBaselineOf="@+id/AirLow"
+        app:layout_constraintEnd_toStartOf="@+id/AirHigh"
+        app:layout_constraintStart_toEndOf="@+id/AirLow" />
+
+    <Button
+        android:id="@+id/AirHigh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="강"
+        app:layout_constraintBaseline_toBaselineOf="@+id/AirMid"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/AirPowerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="현재 에어컨 속도 : "
+        app:layout_constraintBaseline_toBaselineOf="@+id/AirPowerResult"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/AirPowerResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/AirPowerText"
+        app:layout_constraintTop_toBottomOf="@+id/AirMid" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4500684" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="자동 설정"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+
+    <TextView
+        android:id="@+id/AirAutoOn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="ON"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/AirAutoOff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="OFF"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AirAutoOnText" />
+
+    <EditText
+        android:id="@+id/AirAutoOffResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:digits="0123456789"
+        android:ems="5"
+        android:inputType="textPersonName"
+        app:layout_constraintBaseline_toBaselineOf="@+id/AirAutoOff"
+        app:layout_constraintStart_toEndOf="@+id/AirAutoOff" />
+
+
+    <Button
+        android:id="@+id/AirAutoNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="44dp"
+        android:text="설정 안함"
+        app:layout_constraintBaseline_toBaselineOf="@+id/AirAutoOff"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/AirAutoYes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="44dp"
+        android:text="설정"
+        app:layout_constraintBaseline_toBaselineOf="@+id/AirAutoOn"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/AirAutoOnResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:digits="0123456789"
+        android:ems="5"
+        android:inputType="textPersonName"
+        app:layout_constraintBaseline_toBaselineOf="@+id/AirAutoOn"
+        app:layout_constraintStart_toEndOf="@+id/AirAutoOn" />
+
+    <TextView
+        android:id="@+id/AirAutoOnText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text="현재 설정된 ON 온도 :"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AirAutoOn" />
+
+    <TextView
+        android:id="@+id/AirAutoOntemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/AirAutoOnText"
+        app:layout_constraintTop_toBottomOf="@+id/AirAutoOn" />
+
+    <TextView
+        android:id="@+id/AirAutoOffText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text="현재 설정된 OFF 온도 :"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AirAutoOff" />
+
+    <TextView
+        android:id="@+id/AirAutoOfftemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/AirAutoOffText"
+        app:layout_constraintTop_toBottomOf="@+id/AirAutoOff" />
+
+    <Button
+        android:id="@+id/getAirInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="에어컨 정보"
+        app:layout_constraintBaseline_toBaselineOf="@+id/bluetoothCnt"
+        app:layout_constraintEnd_toStartOf="@+id/backBtn"
+        app:layout_constraintStart_toEndOf="@+id/bluetoothCnt" />
+
+    <Button
+        android:id="@+id/bluetoothCnt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="8dp"
+        android:text="블루투스 연결"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline5" />
+
+    <Button
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="뒤로가기"
+        app:layout_constraintBaseline_toBaselineOf="@+id/bluetoothCnt"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
